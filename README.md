@@ -10,7 +10,7 @@ hosting di file statici. Il package non effettua upload su server remoti.
 Installare con Composer nell'applicazione Laravel:
 
 ```sh
-composer require ilbronza/static-site:^0.1
+composer require ilbronza/static-site:dev-main
 ```
 
 [Repository GitHub](https://github.com/ilBronza/StaticSite) ·
