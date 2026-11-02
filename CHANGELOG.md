@@ -9,4 +9,5 @@
 - Sitemap, robots, 404 page and redirect rules for static hosting.
 - Atomic output replacement with failure recovery and build locking.
 - CLI route inventory and build commands.
-- Automated tests for Laravel 11/12 and PHP 8.2/8.4.
+- Laravel 12 support, tested with PHP 8.2/8.4 and Testbench 10.
+- Laravel 11 excluded because its dependency installation is blocked by Composer security advisories.
