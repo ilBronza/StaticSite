@@ -7,8 +7,16 @@ hosting di file statici. Il package non effettua upload su server remoti.
 
 ## Installazione
 
-Il package è distribuito come repository Composer locale, non è pubblicato su
-Packagist. Nell'applicazione ospitante:
+Installare con Composer nell'applicazione Laravel:
+
+```sh
+composer require ilbronza/static-site:^0.1
+```
+
+[Repository GitHub](https://github.com/ilBronza/StaticSite) ·
+[Package Composer](https://packagist.org/packages/ilbronza/static-site)
+
+Per lo sviluppo da un checkout locale è possibile usare un repository `path`:
 
 ```json
 {
