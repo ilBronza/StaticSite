@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — dev-main
+
+- Accept any Illuminate component version without imposing a Laravel major version.
+- Keep the CI matrix explicit about tested versions without restricting host applications.
+
 ## 0.1.0 — 2026-11-02
 
 - Explicit exportable Laravel routes and project-specific page sources.

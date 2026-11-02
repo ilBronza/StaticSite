@@ -25,7 +25,7 @@ jobs:
           extensions: dom, mbstring, xml, xmlwriter, pdo_sqlite
           tools: composer:v2
           coverage: none
-      - run: composer validate --strict
+      - run: composer validate --strict --no-check-all
       - run: composer require --dev "orchestra/testbench:${{ matrix.testbench }}" --no-update --no-interaction
       - run: composer update --prefer-dist --no-interaction --no-progress
       - run: composer test

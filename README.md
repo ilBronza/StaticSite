@@ -30,8 +30,9 @@ Per lo sviluppo da un checkout locale è possibile usare un repository `path`:
 
 Laravel scopre `StaticSiteServiceProvider`. La configurazione si pubblica con
 `php artisan vendor:publish --tag=static-site.config`.
-Requisiti: PHP 8.2+ con DOM, applicazione Laravel completa e componenti Illuminate
-12. Non ci sono migration o dipendenze da altri package IlBronza.
+Requisiti: PHP 8.2+ con DOM e un'applicazione Laravel completa. Sul ramo
+`dev-main` le dipendenze Illuminate accettano qualsiasi versione (`*`).
+Non ci sono migration o dipendenze da altri package IlBronza.
 
 ## Route e sorgenti
 
@@ -152,9 +153,10 @@ scrivere nel vendor condiviso. Con un vendor di test già disponibile:
 STATIC_SITE_TEST_VENDOR=/path/to/vendor php /path/to/vendor/phpunit/phpunit/phpunit -c phpunit.xml
 ```
 
-La release 0.1 supporta Laravel 12. La CI verifica PHP 8.2 e 8.4 con Testbench 10.
-Laravel 11 non è incluso nella release: le sue dipendenze sono attualmente
-bloccate dagli avvisi di sicurezza di Composer. Maclay usa Laravel 12.
+Il ramo `dev-main` non impone una versione di Laravel. La CI verifica Laravel 12
+con PHP 8.2 e 8.4 e Testbench 10; altre versioni richiedono un collaudo nel progetto
+ospitante. Testbench è una dipendenza di sviluppo della suite e non vincola
+le applicazioni che installano il package.
 I test coprono rendering anonimo, enumerazione delle sorgenti, query, dipendenze
 CSS, esclusione dei file privati, collisioni, form, redirect e conservazione
 dell'export precedente. I test Maclay coprono anche lingue, varianti e paginazioni.
