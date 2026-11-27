@@ -36,7 +36,9 @@ final class BuildTest extends TestCase
 
     public static function applicationBasePath(): string
     {
-        return __DIR__.'/../runtime';
+        static $runtime;
+
+        return $runtime ??= require dirname(__DIR__).'/runtime.php';
     }
 
     protected function getPackageProviders($app): array
